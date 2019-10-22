@@ -4,7 +4,7 @@ const path = require('path');
 const fs = require('fs');
 //init
 const app = express();
-const APP_PORT = process.env.port | 3000;
+const APP_PORT = process.env.PORT || 3000;
 let images = [];
 
 app.engine('hbs', hbs({defaultLayout: 'main.hbs'}));
