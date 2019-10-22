@@ -32,6 +32,9 @@ app.get('/random-image', (req, res) => {
     res.sendFile(__dirname + '/public/images/' + images[random_index]);
 })
 
+app.use((req, res, next)=>{
+    res.redirect('/image');
+})
 
 app.listen(APP_PORT,()=>{
     console.log(`Listening on port ${APP_PORT}`);
